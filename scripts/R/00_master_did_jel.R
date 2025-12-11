@@ -16,7 +16,7 @@ library(here)
 source(here::here('scripts/R/0_make_data.R'), echo = TRUE)
 #-------------
 # Construct Adoption Table
-source(here::here('scripts/R/1_adoption_table.R'), echo = TRUE)
+source(here::here('scripts/R/1_Adoption_table.R'), echo = TRUE)
 #-------------
 # Run 2x2 analysis
 source(here::here('scripts/R/2_2x2.R'), echo = TRUE)
