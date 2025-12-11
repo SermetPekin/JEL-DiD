@@ -45,23 +45,7 @@ jobs:
       - name: Install R Dependencies
         run: |
           install.packages("pak")
-          pak::pkg_install(c(
-            "did", 
-            "fixest", 
-            "bacondecomp", 
-            "haven", 
-            "dplyr", 
-            "ggplot2", 
-            "tidyr", 
-            "foreach", 
-            "doParallel", 
-            "MASS", 
-            "here", 
-            "modelsummary",
-            "ggthemes", 
-            "latex2exp",
-            "HonestDiD"
-          ))
+          pak::pkg_install(c("dplyr"))
         shell: Rscript {0}
 
       # 7. Run the script
