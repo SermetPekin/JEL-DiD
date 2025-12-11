@@ -53,4 +53,4 @@ jobs:
 
       # 7. Run the script
       - name: Run the main script
-        run: Rscript scripts/R/00_master_did_jel.R
+        run: Rscript scripts/R/debug.R #00_master_did_jel.R

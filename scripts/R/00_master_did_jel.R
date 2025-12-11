@@ -12,18 +12,22 @@ renv::restore(prompt = FALSE)
 rm(list = ls())
 library(here)
 #-------------
+# Fix conflicts 
+library(conflicted)
+conflict_prefer("select", "dplyr")
+conflict_prefer("filter", "dplyr")
+#-------------
 # Construct the data
-source(here::here('scripts/R/0_make_data.R'), echo = TRUE)
+source(here::here("scripts", "R", "0_make_data.R"), echo = TRUE)
 #-------------
 # Construct Adoption Table
-source(here::here('scripts/R/1_adoption_table.R'), echo = TRUE)
+source(here::here("scripts", "R", "1_Adoption_Table.R"), echo = TRUE)
 #-------------
 # Run 2x2 analysis
-source(here::here('scripts/R/2_2x2.R'), echo = TRUE)
+source(here::here("scripts", "R", "2_2x2.R"), echo = TRUE)
 #-------------
 # Run 2xT analysis
-source(here::here('scripts/R/3_2xT.R'), echo = TRUE)
+source(here::here("scripts", "R", "3_2XT.R"), echo = TRUE)
 #-------------
 # Run the GxT analysis
-source(here::here('scripts/R/4_GxT.R'), echo = TRUE)
-#-------------
+source(here::here("scripts", "R", "4_GxT.R"), echo = TRUE)
