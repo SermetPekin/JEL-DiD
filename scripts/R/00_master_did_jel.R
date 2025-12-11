@@ -15,6 +15,7 @@ library(here)
 # Fix conflicts 
 library(conflicted)
 conflict_prefer("select", "dplyr")
+conflict_prefer("filter", "dplyr")
 #-------------
 # Construct the data
 source(here::here('scripts/R/0_make_data.R'), echo = TRUE)
