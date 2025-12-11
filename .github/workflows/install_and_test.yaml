@@ -56,7 +56,7 @@ jobs:
         run: pwd
 
       - name: Debug List all files recursively after script run
-        run: ls -R
+        run: ls 
         
       # 8. artifacts
       - name: Upload Generated PDFs
@@ -64,5 +64,5 @@ jobs:
         with:
           name: jel-did-replication-pdfs # This is the name for your artifact
           path: | 
-            *.pdf
-            *.tex
+            figures/*.pdf   # For all PDFs inside the figures directory
+            tables/*.tex    # For all TeX files inside the tables directory
