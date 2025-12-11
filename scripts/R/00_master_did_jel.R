@@ -12,6 +12,9 @@ renv::restore(prompt = FALSE)
 rm(list = ls())
 library(here)
 #-------------
+# Fix conflicts 
+source(here::here('scripts/R/001_conflicts.R'), echo = TRUE)
+#-------------
 # Construct the data
 source(here::here('scripts/R/0_make_data.R'), echo = TRUE)
 #-------------
