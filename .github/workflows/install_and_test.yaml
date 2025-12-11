@@ -46,21 +46,8 @@ jobs:
         run: |
           install.packages("pak")
           pak::pkg_install(c(
-            "did", 
-            "fixest", 
-            "bacondecomp", 
-            "haven", 
-            "dplyr", 
-            "ggplot2", 
-            "tidyr", 
-            "foreach", 
-            "doParallel", 
-            "MASS", 
-            "here", 
-            "modelsummary",
-            "ggthemes", 
-            "latex2exp",
-            "HonestDiD"
+            "renv", 
+            "here"
           ))
         shell: Rscript {0}
 
