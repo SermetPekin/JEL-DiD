@@ -51,6 +51,13 @@ jobs:
       # 7. Run the script
       - name: Run the main script
         run: Rscript scripts/R/00_master_did_jel.R
+        
+      - name: Debug Print current working directory
+        run: pwd
+
+      - name: Debug List all files recursively after script run
+        run: ls -R
+        
       # 8. artifacts
       - name: Upload Generated PDFs
         uses: actions/upload-artifact@v4 # Using v4, the latest stable version
