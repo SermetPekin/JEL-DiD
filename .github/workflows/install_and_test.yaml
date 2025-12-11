@@ -45,7 +45,10 @@ jobs:
       - name: Install R Dependencies
         run: |
           install.packages("pak")
-          pak::pkg_install(c("dplyr"))
+          pak::pkg_install(c(
+            "renv", 
+            "here"
+          ))
         shell: Rscript {0}
 
       # 7. Run the script
