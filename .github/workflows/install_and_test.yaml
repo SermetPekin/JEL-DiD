@@ -51,3 +51,11 @@ jobs:
       # 7. Run the script
       - name: Run the main script
         run: Rscript scripts/R/00_master_did_jel.R
+      # 8. artifacts
+      - name: Upload Generated PDFs
+        uses: actions/upload-artifact@v4 # Using v4, the latest stable version
+        with:
+          name: jel-did-replication-pdfs # This is the name for your artifact
+          path: | 
+            *.pdf
+            *.tex
