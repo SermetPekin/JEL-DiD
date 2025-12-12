@@ -2,7 +2,7 @@ name: Run JEL-DiD Replication
 
 on:
   push:
-    branches: [ main, master, SermetPekin/CI-workflow ]
+    branches: [ main, master]
   workflow_dispatch:  
 
 jobs:
